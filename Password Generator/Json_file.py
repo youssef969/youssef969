@@ -7,9 +7,9 @@ class Json_file():
     def add(name_:str,link_:str,password_:str):
 
         passwords_list = []
-        with open(r"D:\Flet - Cross Platform\2.Password_generator\Passwords.json","r") as file:
+        with open(r"D:\Python Projects\Password Generator\Passwords.json","r") as file:
             passwords = json.load(file)
-        with open(r"D:\Flet - Cross Platform\2.Password_generator\Passwords.json","w+") as file:
+        with open(r"D:\Python Projects\Password Generator\Passwords.json","w+") as file:
             try: 
                 for password in passwords["passwords"]:
                     passwords_list.append(password)
@@ -23,7 +23,7 @@ class Json_file():
 
     @staticmethod
     def Passwords_list():
-        with open(r"D:\Flet - Cross Platform\2.Password_generator\Passwords.json","r") as file:
+        with open(r"D:\Python Projects\Password Generator\Passwords.json","r") as file:
                 passwords_list = []
                 passwords = json.load(file)
                 for x in range(len(passwords["passwords"])):
@@ -42,7 +42,7 @@ class Json_file():
             
             edit_list.append({"name":A,"link":B,"password":C})
         name = dict(passwords = edit_list, youssef = "20")
-        with open(r"D:\Flet - Cross Platform\2.Password_generator\Passwords.json","w+") as file:
+        with open(r"D:\Python Projects\Password Generator\Passwords.json","w+") as file:
     
     
             json.dump(name,file,indent=2)
@@ -50,7 +50,7 @@ class Json_file():
     @staticmethod
     def Number_of_passwords():
         passwords_list = []
-        with open(r"D:\Flet - Cross Platform\2.Password_generator\Passwords.json","r") as file:
+        with open(r"D:\Python Projects\Password Generator\Passwords.json","r") as file:
             passwords = json.load(file)
             for password in passwords["passwords"]:
                     passwords_list.append(password)
